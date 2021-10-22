@@ -9,12 +9,11 @@ import { StudentModule } from './student/student.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
+      type: 'mongodb',
+      host: 'localhost:27017/local',
       database: 'lesson',
       synchronize: true,
+      useUnifiedTopology: true,
       entities: [
         Lesson,
         Student
@@ -29,12 +28,3 @@ import { StudentModule } from './student/student.module';
   ],
 })
 export class AppModule { }
-
-// type: 'mysql',
-// host: 'localhost',
-// port: 3306,
-// username: 'root',
-// database: 'taskmanagement',
-// entities: [__dirname + '/../**/*.entity.ts'],
-// synchronize: true,
-// autoLoadEntities: true

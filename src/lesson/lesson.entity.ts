@@ -2,8 +2,8 @@ import { Column, Entity, ObjectIdColumn, PrimaryColumn } from "typeorm";
 
 @Entity()
 export class Lesson {
-    // @ObjectIdColumn()
-    // _id: string;
+    @ObjectIdColumn()
+    _id: string;
 
     @PrimaryColumn()
     id: string;
